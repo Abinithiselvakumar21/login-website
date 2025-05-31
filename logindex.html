@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div class="login">
+            <h1>Login</h1>
+            <h3>Enter your information</h3>
+            <form onsubmit="handleLogin(event)">
+                <label for="login-name">Name</label><br>
+                <input id="login-name" type="text" placeholder="Enter Your Name" required><br><br>
+
+                <label for="login-email">Email ID</label><br>
+                <input id="login-email" type="email" placeholder="Enter your Email ID" required><br><br>
+
+                <label for="login-password">Password</label><br>
+                <input id="login-password" type="password" placeholder="Password" required><br><br>
+
+                <label for="re-password">Re-enter Password</label><br>
+                <input id="re-password" type="password" placeholder="Re-enter the password" required><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Signup Section -->
+        <div class="signup">
+            <h1>Sign Up</h1>
+            <h3>Updates</h3>
+            <p>Join us for free to get instant email updates</p>
+            <form onsubmit="handleSignup(event)">
+                <label for="signup-name">Name</label><br>
+                <input id="signup-name" type="text" placeholder="Enter Your First Name" required><br><br>
+
+                <label for="signup-email">Email ID</label><br>
+                <input id="signup-email" type="email" placeholder="Enter your Email Address" required><br><br>
+
+                <label for="signup-password">Password</label><br>
+                <input id="signup-password" type="password" placeholder="Enter your Password" required><br><br>
+
+                <input type="submit" value="Sign Up">
+            </form><br>
+
+            <i class="fa-solid fa-lock"></i>
+            <span>Your information is safe with us</span><br><br>
+
+            <button onclick="moveToPage()">Get Access Today!</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function moveToPage() {
+            window.location.href = "./login.html";
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from reloading page
+            alert('Login submitted!');
+            moveToPage();
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            alert('Signup submitted!');
+        }
+    </script>
+</body>
+</html>
