@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Login Page with GIFs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      color: #333;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1 span {
+    color: #0077cc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  h1 span:hover {
+    color: #005399;
+    text-decoration: underline;
+  }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container,
+    .content,
+    .gif-container-bottom {
+      animation: fadeInUp 0.9s ease forwards;
+    }
+
+    .container {
+      background-color: #d997b9ab;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      padding: 40px 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin-bottom: 30px;
+       border: 2px solid #8d0a4dab;
+    }
+
+    .container:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      color: #0077cc;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .container h1:hover {
+      color: #005399;
+    }
+
+    .gif-container,
+    .gif-container-bottom {
+      text-align: center;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .gif-container img,
+    .gif-container-bottom img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .content {
+      background-color: #d997b9ab;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 35px 20px;
+      text-align: center;
+      animation-delay: 0.3s;
+      border: 2px solid #8d0a4dab;
+    }
+
+    .content h2 {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      color: #222;
+    }
+
+    @media (min-width: 600px) {
+      .container h1 {
+        font-size: 2.5rem;
+      }
+
+      .content h1 {
+        font-size: 2.2rem;
+      }
+
+      .content h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      body {
+        padding: 50px;
+      }
+
+      .container, .content, .gif-container, .gif-container-bottom {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top GIF -->
+  <div class="gif-container-bottom">
+    <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Form Animation GIF">
+  </div>
+
+  <!-- Clickable Title -->
+  <div class="container">
+    <h1>
+  <span onclick="moveToPage('login')">Login</span> / 
+  <span onclick="moveToPage('signup')">Sign Up</span>
+</h1>
+
+  </div>
+
+  <!-- Text Content -->
+  <div class="content">
+    <h2><b>To Compliment</b></h2>
+    <h1><b>Your Website, 2024</b></h1>
+  </div>
+
+  
+
+  <script>
+    // function moveToPage() {
+    //   window.location.href = "./logindex.html";
+    // }
+
+   
+  function moveToPage(page) {
+    if (page === 'login') {
+      window.location.href = "./logindex.html"; // replace with your actual login page
+    } else if (page === 'signup') {
+      window.location.href = "./signup.html"; // replace with your actual signup page
+    }
+  }
+
+
+  </script>
+
+</body>
+</html>
